@@ -37,7 +37,7 @@ kumu.mat<-kumu.data.c %>%
             add_column(Strength=1) %>%#adds extra column for edgelist
             arrange(From) %>% #arranges to alphabetical so that ID numbers match
             graph_from_data_frame(directed = TRUE, vertices = NULL) %>% #this line added to convert data to a graph object for next line
-  as_adjacency_matrix(attr= "Strength" , sparse=FALSE) 
+            as_adjacency_matrix(attr= "Strength" , sparse=FALSE) 
 
 rownames(kumu.mat)<-c(1:57)
 colnames(kumu.mat)<-c(1:57)
